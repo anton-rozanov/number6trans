@@ -21,6 +21,7 @@ int main() {
   auto result_tree = s();
   std::string result_output;
   exec(result_tree, result_output);
+  std::cout << result_output << "\n\n";
 
   if (!(symbol == EOF || input.size() == ftell(current_stream)))
     throw std::runtime_error("Поток не дочитан до конца");
