@@ -1,0 +1,23 @@
+{
+  "adapters": {
+    "CodeLLDB - StopOnEntry": {
+      "extends": "custom-codelldb",
+      "name": "CoHostingLLDB"
+    }
+  },
+  "configurations": {
+    "cpptools (gdb)": {
+      "adapter": "vscode-cpptools",
+      "variables": {
+      "BUILDME": "make -C ${workspaceRoot}/build"
+      },
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/build/prog",
+        "stopAtEntry": true,
+        "MIMode": "gdb"
+      }
+    }
+  }
+}
+
